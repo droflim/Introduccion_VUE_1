@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<title>Iniciando con VueJS</title>
+</head>
+<body>
+    
+
+<div id="aplicacion">
+    <table class="table table-striped">
+        <thead>
+      <tr>
+        <td>#</td>
+        <td>Nombre</td>
+        <td>Apellido</td>
+        <td>RUN</td>
+        <td>Nacimiento</td>
+        <td>Edad</td>
+   
+    </tr>
+</thead>
+
+        <tbody>
+            <template v-for="dato in datos">
+        <tr> 
+            
+          <td>{{dato.valor1}}</td>
+          <td>{{dato.nombre1}}</td>
+          <td>{{dato.apellido1}}</td>
+          <td>{{dato.run1}}</td>
+          <td>{{dato.nacimiento1}}</td>
+          <td>{{dato.edad1}}</td>
+        </tr>
+        <tr>
+            <td>{{dato.valor2}}</td>
+            <td>{{dato.nombre2}}</td>
+            <td>{{dato.apellido2}}</td>
+            <td>{{dato.run2}}</td>
+            <td>{{dato.nacimiento2}}</td>
+            <td>{{dato.edad2}}</td>
+          </tr>
+          <tr> 
+            <td>{{dato.valor3}}</td>
+            <td>{{dato.nombre3}}</td>
+            <td>{{dato.apellido3}}</td>
+            <td>{{dato.run3}}</td>
+            <td>{{dato.nacimiento3}}</td>
+            <td>{{dato.edad3}}</td>
+          </tr>
+        </template>
+    </tbody>
+    </table>
+
+  </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>   
+<script>
+  var app=new Vue({
+    el: '#aplicacion',
+    data:{ 
+      datos: [{   valor1: '1',
+                  nombre1: 'Jose', 
+                  apellido1: 'Perez',
+                  run1: '16.456.234-2',
+                  nacimiento1: '12-07-1985',
+                  edad1: '36'
+                 },{
+                valor2: '2',
+                nombre2: 'Ernersto', 
+                  apellido2: 'Baez',
+                  run2: '20.436.134-2',
+                  nacimiento2: '15-03-1995',
+                  edad2: '26'
+                 },{
+                     valor3: '3',
+                    nombre3: 'Alfonso', 
+                  apellido3: 'Diaz',
+                  run3: '13.436.224-2',
+                  nacimiento3: '12-07-1988',
+                  edad3: '33'
+                 }]
+
+    }
+  })
+</script>
+</body>
+</html>
